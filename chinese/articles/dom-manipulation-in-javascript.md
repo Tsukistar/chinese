@@ -9,7 +9,7 @@ reviewer: ""
 
 November 23, 2023 / [#JavaScript](/news/tag/javascript/)
 
-# DOM Manipulation in JavaScript – A Comprehensive Guide for Beginners
+# JavaScript中的DOM操作 -- 一份给初学者的综合指南
 
 ![Joan Ayebola](https://www.freecodecamp.org/news/content/images/size/w60/2023/09/Screenshot_20230924-145016.jpg)
 
@@ -17,47 +17,47 @@ November 23, 2023 / [#JavaScript](/news/tag/javascript/)
 
   ![DOM Manipulation in JavaScript – A Comprehensive Guide for Beginners](https://www.freecodecamp.org/news/content/images/size/w2000/2023/11/Beige-Aesthetic-Neutral-Thesis-Defense-Presentation-1.png)
 
-JavaScript, the language of the web, empowers developers to create dynamic and interactive web pages. One of the key features that enables this interactivity is Document Object Model (DOM) manipulation.
+作为一种 Web 的编程语言，JavaScript赋予开发者创建动态和交互式网页的能力。其中一个实现这种交互性的JavaScript关键特性是文档对象模型（DOM）操作。
 
-DOM manipulation allows developers to interact with and modify the structure, style, and content of web pages. In this article, we'll explore the fundamentals of DOM manipulation in JavaScript, breaking down complex concepts into easy-to-understand snippets.
+DOM操作允许开发者修改网页的结构、样式和内容。在本文中，我们将探讨 JavaScript 中 DOM 操作的基础知识，将复杂的概念分解成易于理解的代码片段。
 
-## What is the DOM?
+## 什么是DOM？
 
-The Document Object Model (DOM) is a programming interface for web documents. It represents the structure of a document as a tree of objects, where each object corresponds to a part of the document, such as elements, attributes, and text. JavaScript can manipulate this tree structure, allowing developers to dynamically alter the content and appearance of a webpage.
+文档对象模型（DOM）是用于 web 文档的编程接口。它将文档的结构表示为对象树，其中每个对象对应于文档的一部分，例如元素、属性和文本。JavaScript 可以操作这个树状结构，允许开发者动态地改变网页的内容和外观。
 
-### How to access DOM elements
+### 如何访问 DOM 元素
 
-To manipulate the DOM, we need to access its elements. This is commonly done using the `document` object, which represents the entire HTML document. Let's look at a simple example:
+为了操作 DOM，我们需要访问它的元素。通常我们使用代表整个 HTML 文档的 `document` 对象来实现。让我们看一个简单的例子：
 
 ```javascript
-// Accessing an element by its ID
+// 通过ID访问元素
 const headerElement = document.getElementById('header');
 
-// Accessing elements by class name
+// 通过类名访问元素
 const paragraphs = document.getElementsByClassName('paragraph');
 
-// Accessing elements by tag name
+// 通过标签名访问元素
 const images = document.getElementsByTagName('img');
 ```
 
-In the code snippet above, we use `getElementById`, `getElementsByClassName`, and `getElementsByTagName` to retrieve specific elements. The returned values can then be stored in variables for further manipulation.
+在上面的代码片段中，我们使用 `getElementById`、`getElementsByClassName` 和 `getElementsByTagName` 这三个函数来检索特定的元素。函数的返回值可以存储在变量中，以供我们用于进行接下来的操作。
 
-### How to modify element content
+### 如何修改元素内容
 
-Once we have access to an element, we can modify its content using the `innerHTML` property:
+一旦我们访问到一个元素，我们就可以使用 `innerHTML` 属性来修改它的内容：
 
 ```javascript
-// Modifying the content of an element
+// 修改一个元素的内容
 headerElement.innerHTML = 'New Header Text';
 ```
 
-In the example above, we changed the content of the `headerElement` to `New Header Text`. This is a simple yet powerful way to update the text within an element.
+在上面的例子中，我们将 `headerElement` 的内容更改为 `New Header Text`。这是一种用于更新元素中的文本内容的简单而行之有效的方法。
 
-## Events and Event Handling
+## 事件和事件处理
 
-Events are actions or occurrences that happen in the browser, such as a user clicking a button or resizing the window. JavaScript allows us to handle these events and execute code in response. Event handling is a crucial aspect of creating interactive web pages.
+事件是在浏览器中发生的操作或事务，例如用户点击按钮或调整窗口大小。JavaScript 允许我们处理这些事件并执行代码作为对事件的响应。事件处理是创建交互式网页的关键方面。
 
-### How to add event listeners
+### 如何添加事件监听器
 
 To respond to events, we can use event listeners. These are functions that "listen" for a specific event on a particular element. Let's consider a button click event as an example:
 
